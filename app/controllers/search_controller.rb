@@ -6,12 +6,12 @@ class SearchController < ApplicationController
     @nation = nation.gsub('+', ' ').titleize
 
     conn = Faraday.new(url: "https://last-airbender-api.fly.dev")
-    # require 'pry'; binding.pry
     response = conn.get("/api/v1/characters?perPage=100&affiliation=#{nation}")
     json = JSON.parse(response.body, symbolize_names: true)
     @members = json.map do |member|
       member[:allies] = allies(member[:allies])
       member[:enemies] = enemies(member[:enemies])
+      require 'pry'; binding.pry
       member
     end
   end
