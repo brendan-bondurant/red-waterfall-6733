@@ -1,8 +1,9 @@
 <h1> <%= @nation %></h1>
-Total Members = <%= @members.count %>
+<h2> Total Members = <%= @members.count %> </h2> </br>
 
-<% @members.each do |member| %>
-  Name: <%= member[:name] %> </br>
-  Allies <%= member[:allies] %> </br>
-  Enemies <%= member[:enemies] %> </br>
+<% @members[0..24].each do |member| %>
+  <h3>Name: <%= member[:name] %></h3>
+  Allies: <%= member[:allies] %> </br>
+  Enemies: <%= member[:enemies] %> </br>
+  Affiliations: <%= member[:affiliation] %> </br>
 <% end %>
