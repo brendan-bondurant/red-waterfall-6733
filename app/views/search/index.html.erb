@@ -1,8 +1,8 @@
+<h1><%= @members. %></h1>
 Total Members = <%= @members.count %>
 
 <% @members.each do |member| %>
-  Name: <%= member[:name] %>
-  Allies <%= member[:allies] %>
-  Enemies <%= member[:enemies] %>
-
+  Name: <%= member[:name] %> </br>
+  Allies <%= member[:allies] %> </br>
+  Enemies <%= member[:enemies] %> </br>
 <% end %>
