@@ -27,5 +27,7 @@ RSpec.describe 'welcome page', type: :feature do
     expect(page).to have_content("Enemies: Iroh, Zuko, Kuei, Long Feng, Mai, Ty Lee, Ursa")
     expect(page).to have_content("Affiliations: Azula's team (formerly) Dai Li (formerly) Fire Nation Fire Nation Royal Family Fire Warriors Royal Fire Academy for Girls (formerly)")
     expect(page).to have_css('img[src="https://vignette.wikia.nocookie.net/avatar/images/1/12/Azula.png/revision/latest?cb=20140905084941"]')
+    expect(page).to have_content("Allies: None")
+    expect(page).to have_content("Enemies: None")
   end
 end
