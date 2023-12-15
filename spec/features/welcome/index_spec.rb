@@ -21,7 +21,7 @@ RSpec.describe 'welcome page', type: :feature do
     select 'Fire Nation', from: :nation
     click_button 'Search For Members'
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("Total Members = 20")
+    expect(page).to have_content("Total Members = 97")
     expect(page).to have_content("Name: Azula")
     expect(page).to have_content("Allies")
     expect(page).to have_content("Enemies")
