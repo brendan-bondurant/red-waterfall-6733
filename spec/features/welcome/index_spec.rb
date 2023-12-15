@@ -20,6 +20,7 @@ RSpec.describe 'welcome page', type: :feature do
     visit root_path
     select 'Fire Nation', from: :nation
     click_button 'Search For Members'
-    save_and_open_page
+    expect(current_path).to eq(search_path)
+    expect(page).to have_content("Total Members = ")
   end
 end
