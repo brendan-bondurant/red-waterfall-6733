@@ -11,7 +11,6 @@ class SearchController < ApplicationController
     @members = json.map do |member|
       member[:allies] = allies(member[:allies])
       member[:enemies] = enemies(member[:enemies])
-      require 'pry'; binding.pry
       member
     end
   end

@@ -25,5 +25,6 @@ RSpec.describe 'welcome page', type: :feature do
     expect(page).to have_content("Name: Azula")
     expect(page).to have_content("Allies")
     expect(page).to have_content("Enemies")
+    save_and_open_page
   end
 end
